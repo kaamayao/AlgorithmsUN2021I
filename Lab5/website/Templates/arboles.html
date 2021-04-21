@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Prueba</title>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+        <link rel="stylesheet" href="/static/css/home.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content">
+            <div class="subContent">
+                <a href="http://kaamayao.pythonanywhere.com/">
+                    <img class="logo" src="https://i.pinimg.com/originals/ad/54/5d/ad545dc8468d8a329f4085639202ebbf.png"/>
+                </a>
+                <h1 class="title"> Arboles</h1>
+                <form action="/arboles" method = "POST">
+                    <p>Número de datos <input type = "text" name = "sampleSize" /></p>
+                    <p><input type = "submit" value = "Submit" /></p>
+                </form>
+                <img class="barChart" src={{"http://kaamayao.pythonanywhere.com/arboles-plot?sampleSize="+sampleSize}}/>
+            </div>
+        </div>
+    </body>
+</html>
