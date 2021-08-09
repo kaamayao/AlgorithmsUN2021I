@@ -3,17 +3,17 @@ import sys
 
 def optimal_summands(n):
     summands = []
-    i = n
-    l = 1
+    max_n = n
+    min_n = 1
 
-    while i>0:
-        if i<= (2*l):
-            summands.append(i)
-            i = i-i
+    while max_n  >0:
+        if max_n <= (2*min_n):
+            summands.append(max_n)
+            max_n = max_n-max_n
         else:
-            summands.append(l)
-            i = i-l
-        l = l+1
+            summands.append(min_n)
+            max_n = max_n-min_n
+        min_n = min_n+1
 
     return summands
 
